@@ -257,5 +257,106 @@ public class Main {
 
         teclado.close();
 
+        //---Operador de atribuição cumulativa---
+        // a += b; é igual a = a + b; ("a" recebe o "a" + a variavel "b")
+        // a -= b; é igual a = a - b; ("a" recebe o "a" - a variavel "b")
+        // a *= b; é igual a = a * b; ("a" recebe o "a" * a variavel "b")
+        // a /= b; é igual a = a / b; ("a" recebe o "a" / a variavel "b")
+        // a %= b; é igual a = a % b; ("a" recebe o "a" % a variavel "b")
+
+        //---Estrutura switch-case---
+        // Essa estrutura é utilizada quando se tem várias opções de fluxo a serem tratadas com base no valor de uma variável.
+        // forma do switch case:
+        // switch (expressão) {
+        // case valor1:
+        //    comando 1;
+        //    break;
+        // case valor2:
+        //    comando 2;
+        //    break;
+        // default: (o default serve para todos os casos que não foram numerados, no caso desse exemplo tem 2 casos, se for qualquer numero que não seja 1 ou 2 ele entra no caso default).
+        //    comando 1;
+        //    break;
+        // }
+        //
+        // Outra forma do switch case:
+        //switch (dia) {
+        //   case 1 -> "Domingo";
+        //   case 2 -> "Segunda";
+        //   case 3 -> "Terça"; // Executa este e retorna
+        //   default -> "Dia Inválido";
+        //}
+
+        //---Expressão condicional ternária---
+        // Estrutura opcional ao if-else quando se deseja decidir um valor com base em uma condição
+        //Sintaxe:
+        // ( condição ) ? valor_se_verdadeiro : valor_se_falso
+        //Exemplo:
+        // (2 > 4) ? 50 : 80 (Nesse caso ele retorna 80, pois a condição 2 maior que 4 é falsa, então ele retorna o valor se a condição for falsa, nesse caso o 80;
+        // (10 != 3) ? "Maria" : "Alex" (Nesse caso ele retorna "Maria" pois o 10 é diferente de 3, então a condição retornada é a verdadeira.
+        //Exercício de exemplo:
+
+        //Usando If-Else
+        /*
+        double preco = 34.5;
+        double desconto;
+        if (preco < 20.0) {
+            desconto = preco * 0.1;
+        }else {
+            desconto = preco * 0.05;
+        }
+         */
+
+        //Usando Expresão condicional ternária:
+        /*
+        double preco = 34.5;
+        double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+        System.out.println(desconto);
+        */
+
+        //---Escopo e inicialização---
+        //- Escopo de uma variável: é a região do programa onde a variável é válida, ou seja, onde ela pode ser referenciada.
+        //- Uma variável não pode sr usada se não for iniciada.
+
+        // Exemplo de uma variável não inicializada:
+        /*
+        double price = 400.00;
+        double discount;
+        System.out.println(discount);
+        //(nesse exemplo podemo observar que a variavel discount não recebeu nenhum valor, logo o compilador não permite a compilação desse código;
+        */
+
+        //Exemplo de variável fora do escopo:
+        /*
+        double price = 400.00;
+        if (price > 200.00) {
+            double discount = price * 0.05;
+        }
+        System.out.println(discount);
+        //(Nesse caso a váriavel foi declarada apenas dentro do if, logo assim que o if se encera a váriavel deixa de existir e não pode ser impressa)
+        */
+
+        //Outro exemplo de variável fora do escopo:
+        /*
+        double price = 400.00;
+        double discount;
+        if (price > 200.00) {
+            discount = price * 0.05;
+        }
+        System.out.println(discount);
+        //(Nesse caso ele da um erro diferente, dessa vez a variável foi inicializada fora do if, porém o if só tem uma condição de atribuição se o valor for verdadeiro, então o compilador não sabe o que fazer com a variavel caso ela venha a ser falsa e por isso da o erro).
+        */
+        //como corrigir:
+        /*
+        double price = 400.00;
+        double discount;
+        if (price > 200.00) {
+            discount = price * 0.05;
+        }else{
+            discount = price * 0.01;
+        }
+        System.out.println(discount);
+        //(Agora temos um valor para todas as possibilidade, assim como todas as variaveis inicializadas, o que permite o compilador entender o código e permitir que ele seja compilado).
+        */
     }
 }
