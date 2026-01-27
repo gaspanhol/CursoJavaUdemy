@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Main {
     void main (){
@@ -190,8 +191,150 @@ public class Main {
         //Questão:Leia 1 valor inteiro N, que representa o número de casos de teste que vem a seguir. Cada caso de teste consiste
         //de 3 valores reais, cada um deles com uma casa decimal. Apresente a média ponderada para cada um destes
         //conjuntos de 3 valores, sendo que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor tem peso 5.
+        /*
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite o número de casos de teste: ");
+        int n = teclado.nextInt();
+        double n1;
+        double n2;
+        double n3;
+        double resultado;
+        for (int i = 0; i<n; i++) {
+            System.out.print("Digite os 3 valores do " + (i + 1) + "º caso: ");
+            n1 = teclado.nextDouble();
+            n2 = teclado.nextDouble();
+            n3 = teclado.nextDouble();
+            resultado = (n1 * 0.2) + (n2 * 0.3) + (n3 * 0.5);
+            System.out.printf("%.1f%n",resultado);
+        }
+        teclado.close();
+        */
 
+        //Exercício 4:
+        //Questão:Fazer um programa para ler um número N. Depois leia N pares de números e mostre a divisão do primeiro pelo
+        //segundo. Se o denominador for igual a zero, mostrar a mensagem "divisao impossivel".
+        /*
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite quantos pares de números você deseja fazer divisão: ");
+        int n = teclado.nextInt();
+        double n1;
+        double n2;
+        double resultado;
+        for (int i = 0; i<n; i++){
+            System.out.print("Digite os 2 valores da " + (i + 1) + "ª divisão: ");
+            n1 = teclado.nextDouble();
+            n2 = teclado.nextDouble();
+            if (n2 == 0) {
+                System.out.println("Divisao impossivel");
+            } else {
+                resultado = n1/n2;
+                System.out.printf("%.1f%n",resultado);
+            }
+        }
+        teclado.close();
+        */
 
+        //Exercício 5:
+        //Questão:Ler um valor N. Calcular e escrever seu respectivo fatorial. Fatorial de N = N * (N-1) * (N-2) * (N-3) * ... * 1.
+        //Lembrando que, por definição, fatorial de 0 é 1.
+        /*
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite um valor para descobrir seu respectivo fatorial: ");
+        int n = teclado.nextInt();
+        int resultado = n;
+        if (n == 0){
+            System.out.println("1");
+        }else {
+            for (int i = 1; i<n; i++){
+                resultado *= (n-i);
+            }
+            System.out.println(resultado);
+        }
+        teclado.close();
+         */
 
+        //Exercício 6:
+        //Questão: Ler um número inteiro N e calcular todos os seus divisores.
+        /*
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite um valor para descobrir seus divisores: ");
+        int n = teclado.nextInt();
+        int acumulador;
+        for (int i = 1; i<=n; i++){
+            if (n%i == 0) {
+                System.out.println(i);
+            }
+        }
+        teclado.close();
+         */
+
+        //Exercício 7:
+        //Questão:Fazer um programa para ler um número inteiro positivo N. O programa deve então mostrar na tela N linhas,
+        //começando de 1 até N. Para cada linha, mostrar o número da linha, depois o quadrado e o cubo do valor, conforme exemplo.
+        /*
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite um valor positivo: ");
+        int n = teclado.nextInt();
+        int resultado;
+        if (n>0) {
+            for (int i = 1; i<=n; i++) {
+                for (int j = 1; j<=3; j++) {
+                    resultado = (int) Math.pow(i,j);
+                    System.out.print(resultado + " ");
+                }
+                System.out.println();
+            }
+        }else {
+            System.out.println("Digite um valor positivo!");
+        }
+        teclado.close();
+         */
+
+        //---Estrutura repetitiva "faça enmquanto" (DO WHILE)---
+        // É uma estrutura de controle que repete um bloco de comandos sempre uma vez e depois executa um while enquanto uma condição for verdadeira;
+        // Então a principal diferença do DO WHILE pro WHILE é que ele sempre vai executar um bloco de comando pelo menos 1 vez, diferente do while, que se a condição for falsa desde o inicio, ele não executa o comando nenhuma vez.
+
+        //sintaxe/regra:
+        // Do {
+        //      comando 1
+        //      comando 2
+        // } while (condição);
+
+        //Regra => Verdadeiro: executa e volta / falso: sai do looping (porém ele primeiro executa o comando e só depois verifica se é verdadeiro ou não)
+
+        //Exemplo: Fazer um programa para ler uma temperatura em celsius e mostrar o equivalente em Fahrenheit. Perguntar se o usuário deseja repetir (s/n). Caso o usuário digite "s", repetir o programa
+        // Fórmula: F = (9c/5) + 32
+        /*
+        Scanner teclado = new Scanner(System.in);
+        String repetir;
+        double tempC;
+        double tempF;
+        do {
+            System.out.print("Digite a temperatura em Celsius: ");
+            tempC = teclado.nextDouble();
+            teclado.nextLine();
+            tempF = ((9*tempC)/5) + 32;
+            System.out.printf("Equivalente em Fahrenheit: %.1f%n", tempF);
+            System.out.print("Deseja repetir (s/n)? ");
+            repetir = teclado.nextLine();
+        } while (repetir.equals("s"));
+        teclado.close();
+        */
+
+        //Segunda exemplo mudando de String pra char
+        Scanner teclado = new Scanner(System.in);
+        char repetir;
+        double tempC;
+        double tempF;
+        do {
+            System.out.print("Digite a temperatura em Celsius: ");
+            tempC = teclado.nextDouble();
+            teclado.nextLine();
+            tempF = ((9*tempC)/5) + 32;
+            System.out.printf("Equivalente em Fahrenheit: %.1f%n", tempF);
+            System.out.print("Deseja repetir (s/n)? ");
+            repetir = teclado.next().charAt(0);
+        } while (repetir != 'n');
+        teclado.close();
     }
 }
