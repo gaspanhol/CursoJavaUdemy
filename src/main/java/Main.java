@@ -298,6 +298,7 @@ public class Main {
         System.out.printf("Valor a pagar = R$ %.2f%n", valorAPagar);
         */
 
+        /*
         //Exercício 06:
         //Questão: Fazer um programa que leia três valores com ponto flutuante de dupla precisão: A, B e C. Em seguida, calcule e mostre:
         //a) a área do triângulo retângulo que tem A por base e C por altura.
@@ -323,5 +324,6 @@ public class Main {
 
 
         teclado.close();
+         */
     }
 }
