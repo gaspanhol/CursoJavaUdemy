@@ -163,7 +163,7 @@ public class Main {
         //* Em orientação a objetos, funções em classes recebem o nome de "métodos"
 
         //Exemplo:
-
+        /*
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Enter three numbers: ");
@@ -176,10 +176,10 @@ public class Main {
         showResult(higher);
 
         teclado.close();
-
+        */
 
     }
-
+    /*
     int max(int x, int y, int z){ //podemos usar no java 25 somente int max(int x, int y, int z) ao invés de ter que utilizar public static int max(int x, int y, int z)
         int aux;
         if (x > y && x > z) {
@@ -195,5 +195,5 @@ public class Main {
     void showResult(int value){
         System.out.println("Higher = " + value);
     }
-
+    */
 }
